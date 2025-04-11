@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sortly — Сортируй умнее</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container hero">
+    <div>
+      <h1>Sortly — бот для сортировки отходов ♻️</h1>
+      <p>Поможем понять, куда выбросить любой предмет. Просто напиши — и получи ответ мгновенно!</p>
+      <button class="btn btn-yellow">Запустить бота</button>
+    </div>
+    <img src="/mnt/data/original-a3cc8fd2ece064d267258a16cd65fbd1.jpeg" alt="Sortly preview" />
+  </header>
+
+  <section class="container">
+    <h2>Что умеет бот?</h2>
+    <div class="bento">
+      <div class="bento-box">
+        <h3>📷 Распознавание фото</h3>
+        <p>Пришли фото с подписью — бот подскажет, что с этим делать.</p>
+      </div>
+      <div class="bento-box">
+        <h3>📚 Обучающий режим</h3>
+        <p>Мини-игра, которая научит сортировать отходы правильно.</p>
+      </div>
+      <div class="bento-box">
+        <h3>📍 Геолокация</h3>
+        <p>Показывает ближайшие пункты приёма мусора и Экоцентры.</p>
+      </div>
+      <div class="bento-box">
+        <h3>🤖 Поддержка 100+ предметов</h3>
+        <p>Понимает даже сложные запросы: батарейка, яичная скорлупа, пакетик от чая и другие.</p>
+      </div>
+    </div>
+    <div class="cta">
+      <button class="btn btn-green">Запустить Sortly в Telegram</button>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2>Домашнее ведро для сортировки</h2>
+    <p>Сделано из переработанного пластика. 4 секции, цвет сверху, фиксирует пакеты. Поворачивается по прокрутке ниже:</p>
+    <model-viewer
+  src="bucket.glb"
+  alt="3D модель сортировочного ведра"
+  auto-rotate
+  camera-controls
+  ar
+  style="width: 100%; max-width: 600px; height: 400px; margin: 0 auto; display: block;"
+></model-viewer>
+  </section>
+
+  <section class="container">
+    <h2>Почему наше ведро — это удобно?</h2>
+    <div class="bento">
+      <div class="bento-box">
+        <h3>♻️ Умный дизайн</h3>
+        <p>Каждое отделение промаркировано и удерживает пакет.</p>
+      </div>
+      <div class="bento-box">
+        <h3>🌍 Экологично</h3>
+        <p>Произведено из вторичного сырья. Выбираешь — поддерживаешь планету.</p>
+      </div>
+      <div class="bento-box">
+        <h3>👶 Подходит для всех</h3>
+        <p>Даже ребёнок или бежевый эстет поймёт, куда выбрасывать что.</p>
+      </div>
+    </div>
+    <div class="cta">
+      <button class="btn btn-purple">Купить ведро и поддержать Sortly</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Связаться: hello@sortly.bot | Telegram: @sortly_bot | Разработка © 2025</p>
+  </footer>
+
+
+
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

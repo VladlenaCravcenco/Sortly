@@ -1,7 +1,21 @@
-const canvas = document.getElementById('trash3d');
-if (canvas.getContext) {
-  const ctx = canvas.getContext('2d');
-  ctx.font = '16px Inter';
-  ctx.fillStyle = '#444';
-  ctx.fillText('Здесь будет 3D-модель ведра ✨', 30, 60);
-}
+/* script.js */
+
+// Intersection Observer для анимации появления элементов
+document.addEventListener('DOMContentLoaded', function() {
+  const faders = document.querySelectorAll('.fade-in');
+  
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+  
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+});

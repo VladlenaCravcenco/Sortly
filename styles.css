@@ -1,96 +1,165 @@
+/* styles.css */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   background: #fff;
-  color: #111;
+  color: #333;
   line-height: 1.6;
 }
-header,
-section {
-  padding: 4rem 2rem;
-}
-h1,
-h2,
-h3 {
-  font-weight: 800;
-  margin-bottom: 1rem;
-}
-p {
-  max-width: 600px;
-  margin-bottom: 1rem;
-}
+
+/* Контейнер для центрирования контента */
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
-.btn {
-  padding: 1rem 2rem;
-  border-radius: 999px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.btn-yellow {
-  background: #ffd54f;
-  color: #111;
-}
-.btn-green {
-  background: #81c784;
-  color: #fff;
-}
-.btn-purple {
-  background: #ba68c8;
-  color: #fff;
-}
-.hero {
+
+/* Секция хедера */
+header.hero {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  padding: 4rem 0;
+  background: #f9f9f9;
 }
-.hero img {
-  max-width: 400px;
+
+.hero-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  margin-bottom: 1rem;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
   border-radius: 1rem;
 }
+
+/* Кнопки */
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-yellow {
+  background: #FFD54F;
+  color: #333;
+}
+
+.btn-green {
+  background: #81C784;
+  color: #fff;
+}
+
+.btn-purple {
+  background: #BA68C8;
+  color: #fff;
+}
+
+/* Секции */
+section {
+  padding: 4rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Блоки в виде бенто-коробок */
 .bento {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin-top: 3rem;
 }
+
 .bento-box {
-  background: #f9f9f9;
-  padding: 2rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-}
-.bento-box img {
-  width: 100%;
+  background: #fff;
   border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.bento-box:hover {
+  transform: translateY(-5px);
+}
+
+.bento-box h3 {
   margin-bottom: 1rem;
+  font-size: 1.4rem;
 }
-.highlight {
-  font-weight: 600;
-  color: #4caf50;
-}
+
+/* Выравнивание call-to-action */
 .cta {
   text-align: center;
-  margin: 4rem 0;
+  margin: 3rem 0;
 }
+
+/* Футер */
 .footer {
   background: #f1f1f1;
-  padding: 2rem;
+  padding: 2rem 0;
   text-align: center;
   font-size: 0.9rem;
 }
-canvas {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
+
+/* Обёртка для 3D модели */
+.model-viewer-wrapper {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Анимация плавного появления секций */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Класс, который будет добавляться при скролле */
+.appear {
+  animation: fadeInUp 1s forwards;
 }
